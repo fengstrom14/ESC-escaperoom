@@ -1,0 +1,160 @@
+
+:root {
+    --red: #E3170A;
+    --dark-blue: #011827;
+    --blue: #36769D;
+    --light-blue: #8ACFE5;
+    --gray: #B6BDB5;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #ffffff;
+    color: #011827;
+}
+
+.header-styling {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.logo-container h1 {
+    margin: 0;
+    margin-bottom: 0.35rem;
+    font-size: 1.3rem;
+    line-height: 1.1;
+    max-width: 110px;
+}
+
+.logo-container img {
+    width: 115px;
+    height: auto;
+}
+
+.nav-bar {
+    display: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+    justify-content: center;
+    gap: 8rem;
+    margin-top: 1rem;
+}
+
+.nav-bar a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.nav-bar a:hover {
+    color: var(--light-blue);
+}
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 30px;
+}
+
+#onsite-button {
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+    width: 300px;
+    height: 65px;
+    order: 1;
+    
+}
+#online-button {
+    background: none;
+    border: none;
+    color: var(--blue);
+    text-decoration: underline;
+    width: auto;
+    height: auto;
+    order: 2;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.challenge-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.activity img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.menu-toggle {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+
+@media (min-width: 768px) {
+    .hero img {
+        max-height: 600px;
+        object-fit: cover;
+    }
+    .nav-bar {
+        display: flex;
+    }
+    .menu-toggle {
+        display: none;
+    }
+    .logo-container h1 {
+        max-width: none;
+        font-size: 2rem;
+    }
+    .button-container {
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 0;
+        margin-top: -32.5px;
+        position: relative;
+    }
+    #online-button {
+        background-color: var(--red);
+        color: var(--white);
+        text-decoration: none;
+        border-radius: 4px;
+        font-size: 1.5rem;
+        width: 300px;
+        height: 65px;
+        order: 1;
+    }
+    #onsite-button {
+        order: 2;
+    }
+}
