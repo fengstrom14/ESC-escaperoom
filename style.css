@@ -99,10 +99,11 @@ body {
     width: 100%;
     height: auto;
 }
-.challenge-card img {
+.challenge-card > img {
     display: block;
     width: 100%;
     height: auto;
+    border-radius: 8px 8px 0 0;
 }
 .activity img {
     display: block;
@@ -120,8 +121,83 @@ body {
     cursor: pointer;
 }
 
+.reviews {
+    padding: 4rem 5rem;
+    font-size: 1rem;
+}
+.review-quote {
+    font-style: italic;
+    font-weight: 500;
+}
+.first-review,
+.second-review {
+    display: flex;
+    align-self: flex-start;
+    gap: 1rem;
+}
+.second-review {
+    display: none;
+}
+.reviews img {
+    width: 72px;
+    height: 72px;
+}
+.reviews p:first-child {
+    margin-top: 0;
+}
 
+.challenge-container {
+    display: flex;
+    gap: 3rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding-inline: 10%;
+    scroll-snap-type: x mandatory;
+    border-radius: 8px;
+}
+.challenges h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0.5rem 0 0 0.5rem;
+}
+.challenge-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-left: 0.5rem;
+}
+.challenge-users {
+    margin-left: 5rem;
+    font-size: 14px;
+}
+.challenge-rating img{
+    width: 16px;
+    height: 16px;
+}
+.challenge-description {
+    font-weight: 450;
+    font-size: 18px;
+    margin: 1.25rem;
 
+}
+.challenge-head {
+    text-align: center;
+    font-weight: 500;
+    padding-bottom: 2rem;
+}
+.challenge-card {
+    width: 446px;
+    flex: 0 0 80%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    padding-bottom: 1.5rem;
+    scroll-snap-align: center;
+    overflow: hidden;
+}
+
+.history {
+    
+}
 @media (min-width: 768px) {
     .hero img {
         max-height: 600px;
@@ -156,5 +232,23 @@ body {
     }
     #onsite-button {
         order: 2;
+    }
+    .second-review {
+        display: flex;
+    }
+    .reviews img {
+        width: 96px;
+        height: 96px;
+    }
+    .reviews {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .challenge-container {
+        overflow-x: visible;
+    }
+    .challenge-card {
+        flex: 1;
     }
 }
