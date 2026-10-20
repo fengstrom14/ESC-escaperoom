@@ -72,7 +72,7 @@ body {
     padding-top: 30px;
 }
 
-#onsite-button {
+.onsite-button {
     background-color: var(--light-blue);
     color: var(--dark-blue);
     font-size: 1.5rem;
@@ -84,7 +84,7 @@ body {
     order: 1;
     
 }
-#online-button {
+.online-button {
     background: none;
     border: none;
     color: var(--blue);
@@ -154,6 +154,10 @@ body {
     padding-inline: 10%;
     scroll-snap-type: x mandatory;
     border-radius: 8px;
+    padding-bottom: 30px;
+}
+.challenges {
+    margin-bottom: rem;
 }
 .challenges h3 {
     font-size: 1.5rem;
@@ -178,7 +182,6 @@ body {
     font-weight: 450;
     font-size: 18px;
     margin: 1.25rem;
-
 }
 .challenge-head {
     text-align: center;
@@ -194,9 +197,129 @@ body {
     scroll-snap-align: center;
     overflow: hidden;
 }
+.challenges > .button-container {
+    margin-top: 2rem;
+}
+.booking-button {
+    width: 180px;
+    height: 44px;
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    display: block;
+    margin-left: auto;
+    margin-right: 1rem;
+    margin-bottom: -0.5rem;
 
+}
 .history {
-    
+    background-color: var(--dark-blue);
+    color: var(--white);
+    margin-top: 4rem;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+}
+.history p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 28px;
+    font-weight: 400;
+}
+.history .btn {
+    display: inline-block;
+    padding: 12px 38px;
+    border: 2px solid var(--light-blue);
+    border-radius: 4px;
+    color: var(--light-blue);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.activity {
+    display: flex;
+    flex-direction: column;
+}
+.activity img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.activity-content {
+    padding: 2rem;
+    margin-top: -2rem;
+}
+.activity-content h3 {
+    font-size: 28px;
+    font-weight: 700;
+}
+.activity-content p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: -0.5rem;
+}
+.activity-content .btn {
+    background-color: var(--red);
+    padding: 12px 38px;
+    border-radius: 4px;
+    color: var(--white);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-left: 0;
+}
+.footer {
+    background-color: var(--dark-blue);
+    padding-bottom: 3rem;
+}
+.footer-info {
+    color: var(--white);
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+}
+.footer-info h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+.footer-info p {
+    font-size: 18px;
+    font-weight: 350;
+}
+.footer-navigation {
+    color: var(--white);
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.footer-navigation a {
+    text-decoration: none;
+    color: var(--white);
+}
+.footer-navigation a:nth-of-type(4) {
+    margin-top: 18px;
+}
+.footer-socials {
+    color: var(--white);
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.footer-socials a {
+    text-decoration: none;
+    color: var(--white)
+
 }
 @media (min-width: 768px) {
     .hero img {
@@ -220,7 +343,7 @@ body {
         margin-top: -32.5px;
         position: relative;
     }
-    #online-button {
+    .online-button {
         background-color: var(--red);
         color: var(--white);
         text-decoration: none;
@@ -230,7 +353,7 @@ body {
         height: 65px;
         order: 1;
     }
-    #onsite-button {
+    .onsite-button {
         order: 2;
     }
     .second-review {
@@ -250,5 +373,56 @@ body {
     }
     .challenge-card {
         flex: 1;
+    }
+    .activities {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+    .activity {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+    }
+    .activity:nth-child(2) {
+        flex-direction: row-reverse;
+    }
+    .activity img {
+        width: 50%;
+        height: auto;
+        object-fit: contain;
+    }
+    .activity-content {
+        width: 50%;
+        padding: 3rem 5rem;
+        margin-top: 0;
+    }
+    .activity-content h3 {
+        font-size: 30px;
+        font-weight: 700;
+        padding: 0;
+        margin-top: 0;
+    }
+    .activity-content p {
+        font-size: 20;
+        font-weight: 400;
+        padding: 0;
+        margin-top: 1rem;
+    }
+    .activity-content .btn {
+        margin-top: 1rem;
+        margin-left: 4rem;
+    }
+    .footer {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 4rem;
+        padding: 8rem;
+        align-items: start;
+    }
+    .footer-info {
+        max-width: 450px;
+    }
+    .footer h3 {
+        margin-top: 0;
     }
 }
