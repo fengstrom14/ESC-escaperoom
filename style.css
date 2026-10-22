@@ -1,4 +1,4 @@
-
+/* COLORS */
 :root {
     --red: #E3170A;
     --dark-blue: #011827;
@@ -7,7 +7,7 @@
     --gray: #B6BDB5;
     --white: #ffffff;
 }
-
+/* GLOBAL STYLING */
 * {
     box-sizing: border-box;
 }
@@ -19,6 +19,7 @@ body {
     color: #011827;
 }
 
+/* HEADER AND NAVIGATION */
 .header-styling {
     background-color: var(--dark-blue);
     color: var(--white);
@@ -27,13 +28,11 @@ body {
     flex-direction: column;
     position: relative;
 }
-
 .logo-container {
     display: flex;
     align-items: flex-end;
     gap: 1rem;
 }
-
 .logo-container h1 {
     margin: 0;
     margin-bottom: 0.35rem;
@@ -41,12 +40,10 @@ body {
     line-height: 1.1;
     max-width: 110px;
 }
-
 .logo-container img {
     width: 115px;
     height: auto;
 }
-
 .nav-bar {
     display: none;
     font-weight: 700;
@@ -55,15 +52,15 @@ body {
     gap: 8rem;
     margin-top: 1rem;
 }
-
 .nav-bar a {
     color: var(--white);
     text-decoration: none;
 }
-
 .nav-bar a:hover {
     color: var(--light-blue);
 }
+
+/* BUTTONS */
 .button-container {
     display: flex;
     flex-direction: column;
@@ -71,7 +68,6 @@ body {
     gap: 1rem;
     padding-top: 30px;
 }
-
 .onsite-button {
     background-color: var(--light-blue);
     color: var(--dark-blue);
@@ -82,7 +78,6 @@ body {
     width: 300px;
     height: 65px;
     order: 1;
-    
 }
 .online-button {
     background: none;
@@ -94,6 +89,7 @@ body {
     order: 2;
 }
 
+/* HERO */
 .hero img {
     display: block;
     width: 100%;
@@ -121,6 +117,7 @@ body {
     cursor: pointer;
 }
 
+/* REVIEWS */
 .reviews {
     padding: 4rem 5rem;
     font-size: 1rem;
@@ -146,7 +143,11 @@ body {
     margin-top: 0;
 }
 
-.challenge-container {
+/* CHALLENGES */
+
+/* Horizontal scrolling with snap alignment on mobile */
+.challenge-container 
+{
     display: flex;
     gap: 3rem;
     overflow-x: auto;
@@ -200,6 +201,8 @@ body {
 .challenges > .button-container {
     margin-top: 2rem;
 }
+
+
 .booking-button {
     width: 180px;
     height: 44px;
@@ -211,8 +214,9 @@ body {
     margin-left: auto;
     margin-right: 1rem;
     margin-bottom: -0.5rem;
-
 }
+
+/* HISTORY */
 .history {
     background-color: var(--dark-blue);
     color: var(--white);
@@ -242,6 +246,7 @@ body {
     font-weight: 600;
 }
 
+/* ACTIVITIES */
 .activity {
     display: flex;
     flex-direction: column;
@@ -276,6 +281,8 @@ body {
     margin-top: 1.5rem;
     margin-left: 0;
 }
+
+/* FOOTER */
 .footer {
     background-color: var(--dark-blue);
     padding-bottom: 3rem;
@@ -321,6 +328,8 @@ body {
     color: var(--white)
 
 }
+
+/* DESKTOP STYLING */
 @media (min-width: 768px) {
     .hero img {
         max-height: 600px;
