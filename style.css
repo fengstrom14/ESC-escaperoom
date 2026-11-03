@@ -45,16 +45,36 @@ body {
     height: auto;
 }
 .nav-bar {
-    display: none;
-    font-weight: 700;
-    font-size: 1.5rem;
+    position: fixed;
+    inset: 12px;
+    width: auto;
+    height: auto;
+    background-color: var(--dark-blue);
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    gap: 8rem;
-    margin-top: 1rem;
+    align-items: center;
+    gap: 2rem;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+}
+.nav-bar.active {
+    opacity: 1;
+    visibility: visible;
 }
 .nav-bar a {
     color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 700;
     text-decoration: none;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+.nav-bar.active a {
+    transform: translateY(0);
 }
 .nav-bar a:hover {
     color: var(--light-blue);
@@ -108,15 +128,20 @@ body {
 }
 .menu-toggle {
     position: absolute;
-    right: 1rem;
-    top: 1rem;
+    right: 2rem;
+    top: 2rem;
     background: none;
     border: none;
     color: var(--white);
     font-size: 2rem;
     cursor: pointer;
+    z-index: 1001;
 }
-
+.menu-toggle img {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
 /* REVIEWS */
 .reviews {
     padding: 4rem 5rem;
@@ -336,7 +361,33 @@ body {
         object-fit: cover;
     }
     .nav-bar {
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
         display: flex;
+        flex-direction: row;
+        gap: 8rem;
+        margin-top: 1rem;
+        opacity: 1;
+        visibility: visible;
+        transition: none;
+        background-color: transparent;
+        box-shadow: none;
+        inset: auto;
+        align-items: normal;
+    }
+    .nav-bar .active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-bar a {
+        color: var(--white);
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-decoration: none;
+        transform: none;
+        transition: none;
     }
     .menu-toggle {
         display: none;
