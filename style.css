@@ -56,14 +56,18 @@ body {
     align-items: center;
     gap: 2rem;
     z-index: 1000;
+
+    /* Hidden by default */
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transform: none;
+    transition: none;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
 }
 .nav-bar.active {
     opacity: 1;
     visibility: visible;
+    transition: opacity 0.25s ease-out;
 }
 .nav-bar a {
     color: var(--white);
@@ -376,6 +380,7 @@ body {
         box-shadow: none;
         inset: auto;
         align-items: normal;
+        transform: none;
     }
     .nav-bar .active {
         opacity: 1;
@@ -388,6 +393,7 @@ body {
         text-decoration: none;
         transform: none;
         transition: none;
+        opacity: 1;
     }
     .menu-toggle {
         display: none;
